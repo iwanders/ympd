@@ -105,7 +105,7 @@ var app = $.sammy(function() {
         $('#panel-heading').text("Search: "+searchstr);
     });
 
-
+/*
     this.get(/\#\/dirble\/(\d+)\/(\d+)/, function() {
         prepare();
         current_app = 'dirble';
@@ -130,7 +130,6 @@ var app = $.sammy(function() {
         dirble_load_stations();
     });
 
-
     this.get(/\#\/dirble\//, function() {
         prepare();
         current_app = 'dirble';
@@ -146,6 +145,7 @@ var app = $.sammy(function() {
 
         dirble_load_categories();
     });
+*/
 
     this.get("/", function(context) {
         context.redirect("#/0");
@@ -685,9 +685,9 @@ $('.page-btn').on('click', function (e) {
         case "browse":
             app.setLocation('#/browse/'+pagination+'/'+browsepath);
             break;
-        case "dirble":
-            app.setLocation("#/dirble/"+dirble_catid+"/"+dirble_page);
-            break;
+        // case "dirble":
+            // app.setLocation("#/dirble/"+dirble_catid+"/"+dirble_page);
+            // break;
     }
     e.preventDefault();
 });
@@ -779,7 +779,7 @@ $(document).keydown(function(e){
     }
     e.preventDefault();
 });
-
+/*
 function dirble_load_categories() {
 
     dirble_page = 1;
@@ -934,3 +934,4 @@ function dirble_load_stations() {
         });
     });
 }
+*/
